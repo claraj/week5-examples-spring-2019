@@ -36,7 +36,7 @@ console.log("New office is " + user.contact.office);
 //Add another attribute - even though it's not defined in our object
 user.email = "clara@clara.com";
 
-console.log("Full user info\n" + user); //Nested objects don't display correctly
+console.log("Full user info\n" + user); //Nested objects many not display correctly
 
 console.log("Full user info\n" + JSON.stringify(user)); //Print all of the data on one line
 console.log("Full user info\n" + JSON.stringify(user, null, 2)); //On multiple lines with 2 spaces of indentation
