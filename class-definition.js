@@ -27,7 +27,7 @@ me.setUserId(4);                          //Call function of the User class prot
 
 console.log(me.firstname + " " + me.lastname + " " + me.userid + " " + me.organization);
 
-console.log("Your full name: " + you.fullName());
+console.log("Your full name: " + me.fullName());
 
 
 var you = new User("You", "YourLastName");   //Create another user
@@ -36,4 +36,5 @@ you.setUserId(10);                          //Set userid ; this does not change 
 console.log(you.firstname + " " + you.lastname + " " + you.userid + " " + you.organization);
 
 console.log("Your full name: " + you.fullName());
+
 
