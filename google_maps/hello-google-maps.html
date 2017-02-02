@@ -15,7 +15,7 @@
   </style>
 
   <script async defer
-          src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCw8UpBFSC56VQTYPDhMdwPyrf_aQor91U&callback=initMap">
+          src="https://maps.googleapis.com/maps/api/js?key=**********************&callback=initMap">
   </script>
 
   <script>
@@ -27,7 +27,7 @@
       //Set three required options to display the map
       //Other options such as preventing scrolling or zooming, are available
       var mapOptions = {
-        center : new google.maps.LatLng(47, -93),   // Lat and long to center the map
+        center : new google.maps.LatLng(45, -93),   // Lat and long to center the map
         zoom : 5,                                   // 0 = the whole world, 22 = max zoom in
         mapTypeId : google.maps.MapTypeId.ROADMAP   //or SATELLITE, HYBRID or TERRAIN
       };
@@ -39,8 +39,8 @@
       //Adding a marker to the map
       //Like the map, set the options for the marker
       var markerOptions = {
-        position : new google.maps.LatLng(44.97, -93.26), //Where?
-        map : map,                       //What map?
+        position : new google.maps.LatLng(44.97, -93.26), //Where is the marker?
+        map : map,                       //Add to what map?
         draggable : false,               //No moving the marker!
         title : "Minneapolis is here"    //Tooltip/rollover text
       };
