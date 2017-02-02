@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Images</title>
+
+  <style>
+
+    #canvas {
+      border: 1px black solid;
+    }
+
+    #cat {
+      display: none;   /* hide cat image */
+    }
+
+  </style>
+
+</head>
+<body>
+
+<canvas id="canvas" height="500" width="500"></canvas>
+
+<!--The source image. Could make it invisible with CSS if don't want to see it -->
+<img id="cat" src="small-cat.jpg">
+
+<script>
+
+  var canvas = document.getElementById("canvas");
+
+  //Get the image to draw in the canvas
+  var image = document.getElementById("cat");
+
+  var context = canvas.getContext("2d");
+
+  //Draw image
+  context.drawImage(image, 20, 20);
+  context.drawImage(image, 300, 100);
+  context.drawImage(image, 150, 300);
+
+</script>
+
+</body>
+
+</html>

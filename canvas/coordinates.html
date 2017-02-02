@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Canvas Coordinates</title>
+
+  <style>
+
+    #canvas {
+      border: 1px black solid;
+    }
+
+  </style>
+
+</head>
+
+<body>
+
+<canvas id="canvas" height="500" width="600"></canvas>
+
+<p id="coordinates"></p>
+
+<script>
+
+    var canvas = document.getElementById("canvas");
+
+    canvas.addEventListener("mousemove", showCoords);
+
+    function showCoords() {
+
+      // event is a built-in object with information
+      // about the event that triggered this function
+      var x = event.offsetX;
+      var y = event.offsetY;
+
+      var p = document.getElementById("coordinates");
+      p.innerText = "Mouse x = " + x + " mouse Y = " + y;
+
+    }
+
+
+</script>
+
+</body>
+</html>
