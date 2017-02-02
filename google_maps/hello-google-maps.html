@@ -7,12 +7,19 @@
   <!--From the Google maps developer documentation
   https://developers.google.com/maps/tutorials/fundamentals/adding-a-google-map-->
 
-  <link rel="stylesheet" type="text/css" href="mapstyle.css">
+  <style>
+    #map {
+      height: 400px;
+      width: 500px;
+    }
+  </style>
 
-  <script src="https://maps.googleapis.com/maps/api/js"></script>
+  <script async defer
+          src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCw8UpBFSC56VQTYPDhMdwPyrf_aQor91U&callback=initMap">
+  </script>
 
   <script>
-    function initalize() {
+    function initMap() {
 
       //The mapCanvas is the HTML element that will hold the map
       var mapCanvas = document.getElementById("map");
@@ -21,7 +28,7 @@
       //Other options such as preventing scrolling or zooming, are available
       var mapOptions = {
         center : new google.maps.LatLng(47, -93),   // Lat and long to center the map
-        zoom : 5,                                   // 0 = the whole world, 22 = max zoom
+        zoom : 5,                                   // 0 = the whole world, 22 = max zoom in
         mapTypeId : google.maps.MapTypeId.ROADMAP   //or SATELLITE, HYBRID or TERRAIN
       };
 
@@ -35,26 +42,24 @@
         position : new google.maps.LatLng(44.97, -93.26), //Where?
         map : map,                       //What map?
         draggable : false,               //No moving the marker!
-        title : "Minneapolis is here",    //Tooltip/rollover text
+        title : "Minneapolis is here"    //Tooltip/rollover text
       };
 
-      //Create the marker, with the options above
-      //A new marker with the map option set is automatically added to
-      //the map it belongs to.
+      // Create the marker, with the options above
+      // A new marker with the map option set in the markerOptions,
+      // is automatically added to the map it belongs to.
       var marker = new google.maps.Marker(markerOptions);
 
-
+      // Create an info window
       var infowindow = new google.maps.InfoWindow ( {
         content : "Minneapolis is right here"
       });
 
+      // And add it to our marker
       marker.addListener("click", function() {
         infowindow.open(map, marker);
       });
     }
-
-    //Load map by calling initalize() method; once page has loaded.
-    google.maps.event.addDomListener(window, "load", initalize);
 
   </script>
 
@@ -62,6 +67,7 @@
 <body>
 
 <h1>Where is Minneapolis?</h1>
+<!--This div will contain a map. Note that the size of this div is set with CSS.-->
 <div id="map"></div>
 
 <P>The <a href="https://developers.google.com/maps/documentation/javascript/reference">Google Maps API reference was very helpful.</a></P>
