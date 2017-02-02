@@ -22,7 +22,7 @@
     function initMap() {
 
       //The mapCanvas is the HTML element that will hold the map
-      var mapCanvas = document.getElementById("map");
+      var mapDiv = document.getElementById("map");
 
       //Set three required options to display the map
       //Other options such as preventing scrolling or zooming, are available
@@ -33,7 +33,7 @@
       };
 
       //And create the map, with the options specified. It will be automatically added to the page.
-      var map = new google.maps.Map(mapCanvas, mapOptions);
+      var map = new google.maps.Map(mapDiv, mapOptions);
 
     }
 
@@ -46,6 +46,6 @@
 <!--This div will contain a map. Note that the size of this div is set with CSS.-->
 <div id="map"></div>
 
-<P>The <a href="https://developers.google.com/maps/documentation/javascript/reference">Google Maps API reference was very helpful.</a></P>
 </body>
 </html>
+

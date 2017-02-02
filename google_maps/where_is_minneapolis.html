@@ -21,8 +21,8 @@
   <script>
     function initMap() {
 
-      //The mapCanvas is the HTML element that will hold the map
-      var mapCanvas = document.getElementById("map");
+      //The mapDiv is the HTML element that will hold the map
+      var mapDiv = document.getElementById("map");
 
       //Set three required options to display the map
       //Other options such as preventing scrolling or zooming, are available
@@ -33,7 +33,7 @@
       };
 
       //And create the map, with the options specified
-      var map = new google.maps.Map(mapCanvas, mapOptions);
+      var map = new google.maps.Map(mapDiv, mapOptions);
 
       //Can add features, points of interest, routes, lines etc. to maps
       //Adding a marker to the map
