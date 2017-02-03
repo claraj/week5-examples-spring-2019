@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Interval</title>
+
+  <style>
+
+    #canvas {
+      border: 1px black solid;
+    }
+
+  </style>
+
+</head>
+<body>
+
+<h2>setInterval method used to update canvas</h2>
+
+<!--The canvas element. Set height and width, and give it an id -->
+<canvas id="canvas" height="200" width="300"></canvas>
+
+<script>
+
+  //Find the canvas element in this document
+  var canvas = document.getElementById("canvas");
+  // A context object will be used to draw on the canvas
+  var context = canvas.getContext("2d");
+
+  context.fillStyle = 'purple';
+
+  var squareShowing = false;
+
+  // setInterval - do a task repeatedly. Specify a task to do, like the function name to call,
+  // and the time between repeats in milliseconds. 1000 milliseconds == 1 seconds.
+  // setInterval( nameOfFunction, timeBetweenCallingFunctionInMs )
+  setInterval(drawSquare, 1000);
+
+  function drawSquare() {
+
+    if (squareShowing) {
+      context.clearRect(0, 0, 300, 300);
+      squareShowing = false;
+    } else {
+      context.fillRect(100, 50, 100, 100);
+      squareShowing = true
+    }
+  }
+
+
+
+</script>
+
+</body>
+</html>
+
+
