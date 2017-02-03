@@ -15,7 +15,7 @@
   </style>
 
   <script async defer
-          src="https://maps.googleapis.com/maps/api/js?key=**********************&callback=initMap">
+          src="https://maps.googleapis.com/maps/api/js?key=****************&callback=initMap">
   </script>
 
   <script>
@@ -27,8 +27,8 @@
       //Set three required options to display the map
       //Other options such as preventing scrolling or zooming, are available
       var mapOptions = {
-        center : new google.maps.LatLng(45, -93),   // Lat and long to center the map
-        zoom : 5,                                   // 0 = the whole world, 22 = max zoom in
+        center : new google.maps.LatLng(45, -93.26),   // Lat and long to center the map
+        zoom : 8,                                   // 0 = the whole world, 22 = max zoom in
         mapTypeId : google.maps.MapTypeId.ROADMAP   //or SATELLITE, HYBRID or TERRAIN
       };
 
@@ -38,9 +38,9 @@
       //Can add features, points of interest, routes, lines etc. to maps
       //Adding a marker to the map
       //Like the map, set the options for the marker
-      var markerOptions = {
+      var mplsMarkerOptions = {
         position : new google.maps.LatLng(44.97, -93.26), //Where is the marker?
-        map : map,                       //Add to what map?
+        map : map,                       //What map?
         draggable : false,               //No moving the marker!
         title : "Minneapolis is here"    //Tooltip/rollover text
       };
@@ -48,17 +48,35 @@
       // Create the marker, with the options above
       // A new marker with the map option set in the markerOptions,
       // is automatically added to the map it belongs to.
-      var marker = new google.maps.Marker(markerOptions);
+      var mplsMarker = new google.maps.Marker(mplsMarkerOptions);
+
+
+      var stpMarkerOptions = {
+        position : new google.maps.LatLng(44.95, -93.09), //Where is the marker?
+        map : map,                       //What map?
+        draggable : false,               //No moving the marker!
+        title : "St Paul is here"    //Tooltip/rollover text
+      };
+
+      // Create the marker, with the options above
+      // A new marker with the map option set in the markerOptions,
+      // is automatically added to the map it belongs to.
+      var stPaulMarker = new google.maps.Marker(stpMarkerOptions);
+
 
       // Create an info window
       var infowindow = new google.maps.InfoWindow ( {
         content : "Minneapolis is right here"
       });
 
-      // And add it to our marker
-      marker.addListener("click", function() {
-        infowindow.open(map, marker);
+      // And add it to our Minneapolis marker
+      mplsMarker.addListener("click", function() {
+        infowindow.open(map, mplsMarker);
       });
+
+      //Can you add a info window to St. Paul's marker?
+
+
     }
 
   </script>

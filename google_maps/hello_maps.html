@@ -15,7 +15,7 @@
   </style>
 
   <script async defer
-          src="https://maps.googleapis.com/maps/api/js?key=***********************&callback=initMap">
+          src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCVHRfP2CNHxDRWT7tWMgYBXm7ns-hQLB8&callback=initMap">
   </script>
 
   <script>
@@ -29,11 +29,12 @@
       var mapOptions = {
         center : new google.maps.LatLng(45, -93.26),   // Lat and long to center the map on
         zoom : 10,                                     // 0 = the whole world, 22 = max zoom in
-        mapTypeId : google.maps.MapTypeId.ROADMAP      //or SATELLITE, HYBRID or TERRAIN
+        mapTypeId : google.maps.MapTypeId.SATELLITE      //or SATELLITE, HYBRID or TERRAIN
       };
 
       //And create the map, with the options specified. It will be automatically added to the page.
       var map = new google.maps.Map(mapDiv, mapOptions);
+
 
     }
 
