@@ -6,7 +6,7 @@
 
   <style>
 
-    #canvas {
+    #fill_stroke_canvas {
       border: 1px black solid;
     }
 
@@ -15,5 +15,22 @@
 </head>
 <body>
 
+  <canvas id="fill_stroke_canvas" height="300" width="300"></canvas>
+
+  <script>
+
+    var canvas = document.getElementById("fill_stroke_canvas");
+    var context = canvas.getContext("2d");
+
+    context.fillStyle = "#f00";
+    context.fillRect(20, 20, 100, 100);
+
+    context.strokeStyle = "#f00";
+    context.strokeRect(140, 140, 100, 100);
+
+  </script>
+
 </body>
+
+
 </html>
