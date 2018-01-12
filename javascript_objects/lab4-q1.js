@@ -1,4 +1,4 @@
-/* Lab 4, Part 1 - finish the code indicated by lines marked //TODO  */
+/* Lab 4, Part 1 - write the code requested by lines marked //TODO  */
 
 
 /* a. Use this JavaScript object of exchange rates relative to Euros.
@@ -188,6 +188,7 @@ var nobel_prize_winners_2017 = {
 };
 
 // TODO print the full name of the Literature Nobel laureate.
-// TODO print the ids of each of the Physics Nobel laureates
+// TODO print the ids of each of the Physics Nobel laureates. Your code should still work without modification if a laureate was added, or removed.
+// TODO write code to print the names of all of the prize categories (So your output would start physics, chemistry, medicine... ).
 // TODO write code to print the total number of prize categories
 // TODO write code to count the total number of laureates from 2017. (have a good look at how the JSON is structured, and think about what loop(s) you'll need to write.)
