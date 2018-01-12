@@ -2,6 +2,7 @@
 
 
 /* a. Use this JavaScript object of exchange rates relative to Euros.
+The properties are currency symbols, the values are the exchange rates.
 Data source: http://fixer.io/
 * */
 
@@ -9,11 +10,10 @@ var rates = {
     "AUD": 1.5417,
     "BGN": 1.9558,
     "BRL": 3.8959,
-    "CAD": 1.5194,
-    "CHF": 1.178
+    "CAD": 1.5194
 };
 
-
+// TODO add a new property for Swiss Francs. Symbol is CHF, value is 1.1787.
 // TODO if you had 100 Euros, calculate the equivalent value in Australian Dollars (AUD)
 // TODO write code to identify the currency symbol that has the highest exchange rate compared to Euros.
 //    In other words, identify the property with the largest value. the answer is BRL (Brazilian Real) at 3.8959 BRL to 1 Euro.
