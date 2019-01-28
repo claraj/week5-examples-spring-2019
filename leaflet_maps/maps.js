@@ -1,6 +1,4 @@
-
-let mctcCoordinates = [44.9724, -93.2844]
-let stPaulCoordinates = [44.94839, -93.1099]
+// Array with latitude and longitude 
 let metroAreaCenterCoordinates = [44.96, -93.2]
 
 // Create the map 
@@ -14,20 +12,26 @@ L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={
     accessToken: 'pk.eyJ1IjoiY2xhcmFsIiwiYSI6ImNqcmdwenViYTAwcHQ0Ym5yYmZ1Z3E2bjgifQ.QQfUvVaqPsWb_jJbP2gvHg'
 }).addTo(map)
 
+
 // Add some markers 
-var mctcMarker = L.marker(mctcCoordinates)
+let mctcCoordinates = [44.9724, -93.2844]
+let mctcMarker = L.marker(mctcCoordinates)
     .bindPopup("Minnepolis College<br><a href='https://minneapolis.edu'>Website</a>")
     .addTo(map)
 
-var stpMarker = L.marker(stPaulCoordinates)
+let stPaulCoordinates = [44.94839, -93.1099]
+let stpMarker = L.marker(stPaulCoordinates)
     .bindPopup("Saint Paul College<br><a href='https://saintpaul.edu'>Website</a>")
     .addTo(map)
 
+
 // Add a circle 
 var metroAreaCircle = L.circle(metroAreaCenterCoordinates, {
-    color: 'green',  
-    radius: 30000,
-    fillOpacity: 0.2
-})
-.bindPopup("Twin Cities Metro Area")
-.addTo(map)
+        color: 'green',  
+        radius: 30000,
+        fillOpacity: 0.2
+    })
+    .bindPopup("Twin Cities Metro Area")
+    .addTo(map)
+
+

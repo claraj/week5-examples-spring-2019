@@ -23,8 +23,20 @@
 
   var canvas = document.getElementById("canvas");
   var context = canvas.getContext("2d");
+  
+  var mousedown = false 
 
-  canvas.addEventListener("click", function drawSquare(){
+  canvas.addEventListener("mousedown", function() {
+    mousedown = true
+  });
+
+  canvas.addEventListener("mouseup", function() {
+    mousedown = false 
+  })
+
+  canvas.addEventListener("mousemove", function() {
+
+    if (!mousedown) { return; }
 
     // event is a built-in variable, contains the event that triggered this function
     // get the x, y location of the event
@@ -34,6 +46,7 @@
     //Draw a filled rectangle centered under the mouse click
     //x, y is the top left corner, so shift up and left by 5 to center it under the mouse.
     context.fillRect(x-5, y-5, 10, 10);
+
   })
 
 </script>
