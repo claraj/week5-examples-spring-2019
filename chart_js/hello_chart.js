@@ -22,3 +22,5 @@ chart = new Chart(ctx, {
         }
     }
 })
+
+
