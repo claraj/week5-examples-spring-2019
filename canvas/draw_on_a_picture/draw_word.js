@@ -25,7 +25,7 @@ input.addEventListener("input", function() {
 
     context.drawImage(image, 0, 0);     // Need to redraw the image - no way to clear 
     context.font = "30px Arial Black";  // Set font
-    context.fillText(text, 30, 100);  // And draw text.
+    context.fillText(text, 30, 100);    // And draw text.
 });
 
 
