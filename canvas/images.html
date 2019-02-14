@@ -16,20 +16,23 @@
 <body>
 
 <!--The source image. Could make invisible with CSS if don't want to see it -->
-<img id="cat" src="small-cat.jpg">
+<!-- <img id="cat" src="small-cat.jpg"> -->
 
 <canvas id="canvas" height="500" width="500"></canvas>
-
 
 <script>
 
   var canvas = document.getElementById("canvas");
 
+
+  let image = new Image();
+  image.src = "small-cat.jpg";
+
   // Get the image to draw in the canvas
   // But, we have to make sure the image has loaded before we try and draw it.
   // So find the image element, and use the onload event to be notified that it has loaded.
-  var image = document.getElementById("cat");
-  image.onload = function(){
+  
+  image.addEventListener('load', function(){
 
     var context = canvas.getContext("2d");
 
@@ -38,7 +41,7 @@
     context.drawImage(image, 300, 100);
     context.drawImage(image, 150, 300);
 
-  };
+  })
 
 
 </script>

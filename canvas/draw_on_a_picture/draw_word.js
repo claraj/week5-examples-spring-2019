@@ -7,7 +7,7 @@ let input = document.querySelector("#image_text");
 input.disabled = true;
 
 // Drawing the image - create an image and set the source 
-// add callback to know whwn the image is loaded and ready, 
+// add callback to know when the image is loaded and ready, 
 // so can draw it to the canvas and enable the input
 let image = new Image();
 image.src = "cat.jpg";
