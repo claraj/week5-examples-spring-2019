@@ -2,7 +2,7 @@
 let metroAreaCenterCoordinates = [44.96, -93.2]
 
 // Create the map 
-let map = L.map('mctc-map').setView(metroAreaCenterCoordinates, 9)
+let map = L.map('college-map').setView(metroAreaCenterCoordinates, 9)
 
 // Add the tile layer - roads, streets etc. Without this, nothing to see 
 L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}', {
